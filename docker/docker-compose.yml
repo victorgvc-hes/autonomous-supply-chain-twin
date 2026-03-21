@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ascdt
+    volumes:
+      - ..:/app
+      - ../data:/app/data
+      - ../logs:/app/logs
+      - ../results:/app/results
+    ports:
+      - "8888:8888"  # Jupyter
+      - "8050:8050"  # Dash
+      - "8501:8501"  # Streamlit
+      - "6006:6006"  # TensorBoard
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser

@@ -1,0 +1,156 @@
+# Configuration file for ASCDT project
+
+# Data Configuration
+data:
+  raw_path: "data/raw/m5"
+  processed_path: "data/processed"
+  synthetic_path: "data/synthetic"
+  
+  # M5 specific
+  m5:
+    calendar_file: "calendar.csv"
+    sales_train_file: "sales_train_validation.csv"
+    sell_prices_file: "sell_prices.csv"
+    train_end_date: "2016-03-27"  # d_1913
+    validation_days: 28
+    test_days: 28
+    
+# Forecasting Configuration
+forecasting:
+  models:
+    - temporal_fusion_transformer
+    - nbeats
+    - nhits
+    - deepar
+    - prophet
+  
+  horizon: 28  # days ahead
+  history_length: 365  # days of history
+  
+  tft:
+    hidden_size: 128
+    attention_head_size: 4
+    dropout: 0.1
+    hidden_continuous_size: 16
+    learning_rate: 0.001
+    batch_size: 128
+    max_epochs: 30
+  
+  ensemble:
+    method: "weighted_average"  # or "stacking"
+    weights: "optimize"  # or manual list
+    
+# Simulation Configuration
+simulation:
+  engine: "hybrid"  # DES + ABM
+  
+  network:
+    num_warehouses: 10
+    num_stores: 500  # subset of M5 stores
+    
+  inventory_policy:
+    review_period: 7  # days
+    lead_time_mean: 14  # days
+    lead_time_std: 3
+    
+  service_level_target: 0.95
+  
+  disruption_scenarios:
+    - type: "supplier_failure"
+      probability: 0.02
+      duration_mean: 14
+      impact: 0.3  # % of SKUs affected
+      
+    - type: "demand_spike"
+      probability: 0.05
+      magnitude: 2.0
+      
+# RL Configuration
+reinforcement_learning:
+  framework: "rllib"
+  
+  environment:
+    name: "SupplyChainEnv"
+    max_steps: 365
+    
+  algorithm: "PPO"  # or "SAC", "APEX"
+  
+  ppo:
+    num_workers: 4
+    train_batch_size: 4000
+    sgd_minibatch_size: 128
+    num_sgd_iter: 10
+    lr: 0.0003
+    gamma: 0.99
+    lambda_: 0.95
+    clip_param: 0.2
+    
+  multi_agent:
+    num_agents: 10  # one per warehouse
+    policy: "shared"  # or "independent"
+    
+  reward:
+    holding_cost_weight: 1.0
+    stockout_cost_weight: 10.0
+    ordering_cost_weight: 0.1
+    
+# Causal Configuration
+causal:
+  structure_learning:
+    algorithm: "pc"  # or "ges", "notears"
+    significance_level: 0.05
+    
+  features:
+    - "price"
+    - "promotion"
+    - "holiday"
+    - "day_of_week"
+    - "month"
+    - "snap"
+    - "event_type"
+    
+# Training Configuration
+training:
+  seed: 42
+  device: "cuda"  # or "cpu"
+  mixed_precision: true
+  
+  logging:
+    use_wandb: true
+    use_mlflow: true
+    log_interval: 100
+    
+  checkpointing:
+    save_dir: "checkpoints"
+    save_every_n_epochs: 5
+    
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - "rmse"
+    - "mae"
+    - "mape"
+    - "wrmsse"  # M5 competition metric
+    - "service_level"
+    - "total_cost"
+    
+  baseline_methods:
+    - "naive"
+    - "seasonal_naive"
+    - "arima"
+    - "ets"
+    
+# Dashboard Configuration
+dashboard:
+  host: "0.0.0.0"
+  port: 8050
+  debug: false
+  
+  refresh_interval: 60  # seconds
+  
+# Paths
+paths:
+  models: "models"
+  results: "results"
+  logs: "logs"
+  checkpoints: "checkpoints"

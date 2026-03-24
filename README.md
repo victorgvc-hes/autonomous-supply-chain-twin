@@ -70,8 +70,8 @@ Retailers managing products with **intermittent demand** (60%+ zero-sales days) 
 ```
 autonomous-supply-chain-twin/
 ├── data/
-│   ├── raw/m5/                    # Original M5 dataset
-│   └── processed/                 # Processed with features
+│   ├── raw/m5/                    # Original M5 dataset (gitignored)
+│   └── processed/                 # Processed data & features
 ├── notebooks/
 │   ├── 01_exploration/
 │   │   └── m5_data_exploration.ipynb
@@ -79,15 +79,20 @@ autonomous-supply-chain-twin/
 │   │   ├── baseline_forecasting_models.ipynb
 │   │   ├── advanced_forecasting_models.ipynb
 │   │   └── multi_product_forecasting.ipynb
-│   └── 03_simulation/
-│       └── supply_chain_digital_twin.ipynb
+│   ├── 03_simulation/
+│   │   └── supply_chain_digital_twin.ipynb
+│   └── 04_reinforcement_learning/
+│       └── rl_inventory_agent.ipynb
 ├── src/
 │   ├── data_generation/           # Preprocessing & features
 │   ├── forecasting/               # Model implementations
 │   ├── simulation/                # Digital twin engine
-│   └── utils/                     # Helpers & metrics
-├── results/                       # Model outputs & KPIs
-├── docs/                          # Documentation
+│   └── utils/                     # Config, logging, metrics
+├── scripts/                       # Utility scripts
+├── docker/                        # Dockerfile & docker-compose
+├── configs/                       # YAML configuration
+├── results/                       # Model outputs & KPIs (CSV)
+├── docs/                          # Documentation & presentations
 └── requirements.txt               # Dependencies
 ```
 
@@ -127,6 +132,26 @@ Navigate to `notebooks/` and run in order:
 3. `02_modeling/advanced_forecasting_models.ipynb`
 4. `02_modeling/multi_product_forecasting.ipynb`
 5. `03_simulation/supply_chain_digital_twin.ipynb`
+6. `04_reinforcement_learning/rl_inventory_agent.ipynb`
+
+### Alternative: Run with Docker
+
+```bash
+# Build and start the container (Jupyter Lab on port 8888)
+cd docker
+docker-compose up --build
+
+# Open in browser: http://localhost:8888
+```
+
+Ports exposed by the container:
+
+| Port | Service |
+|------|---------|
+| 8888 | Jupyter Lab |
+| 8501 | Streamlit (future dashboard) |
+| 8050 | Dash (future dashboard) |
+| 6006 | TensorBoard |
 
 ---
 
@@ -216,7 +241,8 @@ Navigate to `notebooks/` and run in order:
 
 ## 🔮 Future Enhancements
 
-- [ ] **Multi-Agent Reinforcement Learning** for dynamic inventory optimization
+- [x] **Reinforcement Learning experiment** (Q-Learning vs rule-based — completed, see `notebooks/04_reinforcement_learning/`)
+- [ ] **Advanced RL** (DQN / multi-agent for dense-demand products)
 - [ ] **Network-level simulation** (multi-store coordination)
 - [ ] **Interactive dashboard** (Streamlit deployment)
 - [ ] **Real-time API** for production deployment
@@ -227,9 +253,12 @@ Navigate to `notebooks/` and run in order:
 
 ## 📚 Documentation
 
-- [Executive Summary](docs/EXECUTIVE_SUMMARY.txt)
-- [Technical Details](docs/TECHNICAL_DETAILS.md)
-- [Results Summary](results/)
+- [Executive Summary](docs/EXECUTIVE_SUMMARY.md)
+- [RL Experiment Summary](docs/RL_EXPERIMENT_SUMMARY.md)
+- [Quick Start Guide](docs/QUICK_START.md)
+- [Results Summary](RESULTS_SUMMARY.md)
+- [Executive Presentation Script](docs/PRESENTATION_SCRIPT_EXECUTIVE_FINAL.md)
+- [Technical Presentation Script](docs/PRESENTATION_SCRIPT_TECHNICAL_FINAL.md)
 
 ---
 

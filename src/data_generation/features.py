@@ -243,9 +243,9 @@ class FeatureEngineer:
             df_copy['has_event_2'] = (df_copy['event_name_2'] != 'None').astype(int)
         
         # Combined event indicator
-        df_copy['has_any_event'] = (
-            df_copy.get('has_event_1', 0) | df_copy.get('has_event_2', 0)
-        ).astype(int)
+        has_event_1_col = df_copy['has_event_1'] if 'has_event_1' in df_copy.columns else pd.Series(0, index=df_copy.index)
+        has_event_2_col = df_copy['has_event_2'] if 'has_event_2' in df_copy.columns else pd.Series(0, index=df_copy.index)
+        df_copy['has_any_event'] = (has_event_1_col | has_event_2_col).astype(int)
         
         # Event type encoding
         if 'event_type_1' in df_copy.columns:

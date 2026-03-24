@@ -1,0 +1,2 @@
+experiment,training_episodes,training_days,test_days,states_learned,final_epsilon,rl_total_cost,rule_total_cost,cost_difference,improvement_pct,winner
+Q-Learning Inventory Optimization,500,180,1705,30,0.08157186144027828,345922.5,4484.5,-341438.0,-7613.736202475192,Rule-Based

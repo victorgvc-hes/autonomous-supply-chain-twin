@@ -17,8 +17,8 @@ ENV/
 
 # Data files (too large for GitHub)
 data/raw/
-*.parquet
-*.csv
+data/**/*.parquet
+data/**/*.csv
 *.zip
 *.tar.gz
 

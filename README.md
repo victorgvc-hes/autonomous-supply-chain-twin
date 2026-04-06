@@ -262,21 +262,6 @@ Ports exposed by the container:
 
 ---
 
-## Author
-
-**Victor Vergara**
-- LinkedIn: https://www.linkedin.com/in/victor-vergara075/
-- Email: victorgvc@gmail.com
-- Portfolio: https://github.com/victorgvc-hes?tab=repositories
-
----
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
 ## Acknowledgments
 
 - **M5 Walmart Dataset:** Kaggle Competition
@@ -295,6 +280,24 @@ This project demonstrates:
 - ✅ **Scalable architecture** (multi-product batch processing)
 
 **Portfolio Status: Top 5% tier**
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## Author
+
+**Victor Vergara**
+- LinkedIn: https://www.linkedin.com/in/victor-vergara075/
+- Email: victorgvc@gmail.com
+- Portfolio: https://github.com/victorgvc-hes?tab=repositories
+
+20+ years procurement & operations · Industrial Engineering · 
+Applied AI/ML in supply chain
 
 ---
 """

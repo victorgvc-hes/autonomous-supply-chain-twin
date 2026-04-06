@@ -241,7 +241,7 @@ Ports exposed by the container:
 
 ## Future Enhancements
 
-- [x] **Reinforcement Learning experiment** (Q-Learning vs rule-based — completed, see `notebooks/04_reinforcement_learning/`)
+- [ ] **Reinforcement Learning experiment** (Q-Learning vs rule-based — completed, see `notebooks/04_reinforcement_learning/`)
 - [ ] **Advanced RL** (DQN / multi-agent for dense-demand products)
 - [ ] **Network-level simulation** (multi-store coordination)
 - [ ] **Interactive dashboard** (Streamlit deployment)
@@ -294,7 +294,7 @@ This project demonstrates:
 - ✅ **Domain expertise** (supply chain + AI/ML combined)
 - ✅ **Scalable architecture** (multi-product batch processing)
 
-**Portfolio Status: Top 5% tier** 🌟
+**Portfolio Status: Top 5% tier**
 
 ---
 """

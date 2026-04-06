@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Project Overview
+##  Project Overview
 
 An **end-to-end AI-powered supply chain system** that combines advanced demand forecasting with discrete event simulation to optimize inventory management decisions for products with intermittent demand patterns.
 
@@ -25,7 +25,7 @@ Retailers managing products with **intermittent demand** (60%+ zero-sales days) 
 
 ---
 
-## 🏆 Key Results
+## Key Results
 
 ### Forecasting Performance
 - **Best Model:** ARIMA (RMSE: 0.8619 across 10 products)
@@ -44,7 +44,7 @@ Retailers managing products with **intermittent demand** (60%+ zero-sales days) 
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 - **Source:** [M5 Walmart Forecasting Competition](https://www.kaggle.com/c/m5-forecasting-accuracy)
 - **Products:** 10 FOODS category items
@@ -54,7 +54,7 @@ Retailers managing products with **intermittent demand** (60%+ zero-sales days) 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Category | Technologies |
 |----------|-------------|
@@ -66,7 +66,7 @@ Retailers managing products with **intermittent demand** (60%+ zero-sales days) 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 autonomous-supply-chain-twin/
 ├── data/
@@ -98,7 +98,7 @@ autonomous-supply-chain-twin/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone Repository
 ```bash
@@ -155,7 +155,7 @@ Ports exposed by the container:
 
 ---
 
-## 📈 Methodology
+## Methodology
 
 ### Phase 1: Exploratory Data Analysis
 - Seasonality analysis (weekly, monthly, yearly patterns)
@@ -189,7 +189,7 @@ Ports exposed by the container:
 
 ---
 
-## 🎓 Key Features
+## Key Features
 
 ### 1. Feature Engineering Pipeline
 - **61 automated features** including:
@@ -214,7 +214,7 @@ Ports exposed by the container:
 
 ---
 
-## 📊 Results & Insights
+## Results & Insights
 
 ### Finding 1: No Single Model Dominates
 - **ARIMA:** 30% of products
@@ -239,7 +239,7 @@ Ports exposed by the container:
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [x] **Reinforcement Learning experiment** (Q-Learning vs rule-based — completed, see `notebooks/04_reinforcement_learning/`)
 - [ ] **Advanced RL** (DQN / multi-agent for dense-demand products)
@@ -251,7 +251,7 @@ Ports exposed by the container:
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - [Executive Summary](docs/EXECUTIVE_SUMMARY.md)
 - [RL Experiment Summary](docs/RL_EXPERIMENT_SUMMARY.md)
@@ -262,7 +262,7 @@ Ports exposed by the container:
 
 ---
 
-## 👤 Author
+## Author
 
 **Victor Vergara**
 - LinkedIn: https://www.linkedin.com/in/victor-vergara075/
@@ -271,13 +271,13 @@ Ports exposed by the container:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **M5 Walmart Dataset:** Kaggle Competition
 - **Libraries:** Statsmodels, Prophet, Scikit-learn, Pandas
@@ -285,7 +285,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## ⭐ Project Highlights
+## Project Highlights
 
 This project demonstrates:
 - ✅ **End-to-end thinking** (data → forecast → simulate → decide)
@@ -297,6 +297,4 @@ This project demonstrates:
 **Portfolio Status: Top 5% tier** 🌟
 
 ---
-
-*Built with ❤️ for supply chain optimization*
 """

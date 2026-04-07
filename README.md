@@ -1,8 +1,22 @@
-**Advanced AI-Powered Demand Forecasting & Inventory Optimization System**
+# Advanced AI-Powered Demand Forecasting & Inventory Optimization System
 
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Active](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-A31F34?logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+[![Status: Active](https://img.shields.io/badge/Status-Active-2EA44F)]()
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)]()
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)]()
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)]()
+
+[![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)]()
+[![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)]()
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikitlearn&logoColor=white)]()
+[![Statsmodels](https://img.shields.io/badge/Statsmodels-2C3E50?logoColor=white)]()
+[![Prophet](https://img.shields.io/badge/Prophet-0F172A?logoColor=white)]()
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logoColor=white)]()
+[![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?logoColor=white)]()
+[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?logo=kaggle&logoColor=white)]()
+
+An end-to-end AI-powered supply chain system for demand forecasting, digital twin simulation, and inventory policy optimisation under intermittent demand.
 
 ---
 

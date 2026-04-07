@@ -16,26 +16,32 @@
 [![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?logoColor=white)]()
 [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?logo=kaggle&logoColor=white)]()
 
-An end-to-end AI-powered supply chain system for demand forecasting, digital twin simulation, and inventory policy optimisation under intermittent demand.
+An end-to-end AI-powered supply chain system that combines demand forecasting, digital twin simulation, and inventory optimisation for products with intermittent demand patterns.
 
 ---
 
-##  Project Overview
+## Project Overview
 
-An **end-to-end AI-powered supply chain system** that combines advanced demand forecasting with discrete event simulation to optimize inventory management decisions for products with intermittent demand patterns.
+This project presents a complete AI and analytics pipeline for improving inventory decisions in retail environments where demand is sparse, irregular, and difficult to predict.
+
+It integrates machine learning forecasting, multi-product evaluation, and discrete event simulation to support better reorder policies, stronger service levels, and lower inventory-related costs.
 
 ### The Challenge
-Retailers managing products with **intermittent demand** (60%+ zero-sales days) face critical inventory decisions:
-- ❌ **Over-stock** → High holding costs, capital tied up
-- ❌ **Under-stock** → Lost sales, poor customer experience
-- ❌ **Traditional methods** struggle with sparse, irregular patterns
+
+Retailers managing products with intermittent demand often face three major problems:
+
+- **Overstocking** increases holding costs and ties up working capital.
+- **Understocking** leads to missed sales and weaker customer service.
+- **Traditional forecasting methods** often perform poorly when demand contains many zero-sales days and unpredictable spikes.
 
 ### The Solution
-**ASCDT** provides a complete pipeline:
-1. **Forecast** future demand using 8+ ML/statistical models
-2. **Simulate** inventory operations with digital twin
-3. **Optimize** reorder policies based on cost-service trade-offs
-4. **Scale** to multiple products with batch processing
+
+**ASCDT** provides an end-to-end framework that:
+
+1. Forecasts future demand using multiple statistical and machine learning approaches.
+2. Simulates inventory operations through a digital twin environment.
+3. Evaluates reorder policies using cost-versus-service trade-offs.
+4. Scales analysis across multiple products through batch processing.
 
 ---
 
